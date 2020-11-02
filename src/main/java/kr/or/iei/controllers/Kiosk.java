@@ -27,9 +27,13 @@ public class Kiosk {
     private void chooseProducts() {
         final ProductType productType = chooseProduct();
         System.out.println(productType);
-        final List<Product> productListByType = productService.getProductListByType(productType);
-        for (Product product : productListByType) {
-            System.out.println(product);
+        final List<Product> productsByProductType = productService.getProductListByType(productType);
+        renderProducts(productsByProductType);
+    }
+
+    private void renderProducts(List<Product> productsByProductType) {
+        for (Product product : productsByProductType) {
+            System.out.printf("%d. %s(%d원)\n", product.getId(), product.getName(), product.getPrice());
         }
 
     }

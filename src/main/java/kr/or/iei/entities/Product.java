@@ -18,6 +18,18 @@ public class Product {
         return productType;
     }
 
+    public long getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public long getPrice() {
+        return price;
+    }
+
     @Override
     public String toString() {
         return "Product{" +
