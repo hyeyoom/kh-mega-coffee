@@ -14,4 +14,8 @@ public class ProductService {
     public List<Product> getProductListByType(ProductType productType) {
         return repository.getProductListByType(productType);
     }
+
+    public Product getProductById(int productId) {
+        return repository.getProductById(productId);
+    }
 }

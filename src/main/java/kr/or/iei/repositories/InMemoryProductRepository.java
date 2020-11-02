@@ -37,4 +37,14 @@ public class InMemoryProductRepository implements ProductRepository {
         }
         return products;
     }
+
+    @Override
+    public Product getProductById(int productId) {
+        for (Product product : list) {
+            if(product.getId() == productId) {
+                return product;
+            }
+        }
+        return null;
+    }
 }
