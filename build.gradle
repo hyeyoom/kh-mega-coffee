@@ -11,4 +11,5 @@ repositories {
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile group: 'com.oracle.ojdbc', name: 'ojdbc10_g', version: '19.3.0.0'
 }
